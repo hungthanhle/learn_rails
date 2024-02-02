@@ -76,5 +76,12 @@ Rails.application.configure do
   config.log_tags = [:request_id]
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
+  config.log_formatter = ->(severity, datetime, progname, msg) do
+    tags = []
+    tags << "PID-#{Process.pid}"
+    tags << "TID-#{Thread.current.object_id.to_s(36)}"
+    tags << "RID-#{Thread.current[:request_id]}" if Thread.current[:request_id].present?
+  
+    "#{severity} [#{datetime}] #{tags.join(' ')} : #{msg}\n"
+  end
 end
