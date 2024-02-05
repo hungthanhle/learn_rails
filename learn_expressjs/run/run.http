@@ -25,3 +25,12 @@ GET http://localhost:3001/api/objects
 ###
 
 GET http://localhost:3001/api/objects_bind
+
+
+# node learn_expressjs/app.js
+# create new instance
+# Server is running on http://localhost:3001
+# GET /api/users # undefined
+# GET /api/users_bind # UserController {}
+# => Không tạo mới instance controller (trừ khi khởi động lại)
+# => Có thể dùng được instance variables (ví dụ: this.users)

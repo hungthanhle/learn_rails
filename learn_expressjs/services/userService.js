@@ -1,6 +1,6 @@
 const User = require('../models/userModel');
 
-class UserService {
+class UserService { // không bị dùng ở middleware
   constructor() {
     this.users = [];
   }

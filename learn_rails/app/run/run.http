@@ -46,3 +46,21 @@
 # INFO [2024-02-03 00:16:09 +0700] PID-27604 TID-ahs : [cccf6b21-cfb6-4fb9-b8b7-262f9d2d32b2] Processing by Rails::WelcomeController#index as */*
 # INFO [2024-02-03 00:16:09 +0700] PID-27604 TID-ahs : [cccf6b21-cfb6-4fb9-b8b7-262f9d2d32b2]   Rendered /home/hung/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
 # INFO [2024-02-03 00:16:09 +0700] PID-27604 TID-ahs : [cccf6b21-cfb6-4fb9-b8b7-262f9d2d32b2] Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 310)
+
+
+# rails s
+# GET http://localhost:3000/greetings/hello
+# HTML:
+# Greetings#hello
+# Find me in app/views/greetings/hello.html.erb
+#
+# #<GreetingsController:0x00007f94dc847560> 90f7158e-68bb-4ca5-8bb5-c953952d727
+
+# GET http://localhost:3000/greetings/hello
+# HTML:
+# Greetings#hello
+# Find me in app/views/greetings/hello.html.erb
+#
+# # <GreetingsController:0x00007f94dcbc1f60> 63c1f5d3-dd45-4286-b667-dd9308213543
+
+# tạo new_instance_controller/request
