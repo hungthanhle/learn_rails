@@ -1,0 +1,27 @@
+###
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+  "name": "name",
+  "email": "email"
+}
+
+
+###
+GET http://localhost:3001/api/users
+
+# Nếu bạn đang sử dụng các middleware, đặc biệt là trong context của Express.js, 
+# giảm giá trị của this có thể là vấn đề. 
+# Trong trường hợp này, bạn có thể cần bind method với đối tượng của nó trong middleware.
+
+###
+GET http://localhost:3001/api/users_bind
+
+# context by export
+###
+GET http://localhost:3001/api/objects
+
+###
+
+GET http://localhost:3001/api/objects_bind
