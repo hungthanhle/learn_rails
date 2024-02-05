@@ -23,7 +23,6 @@ GET http://localhost:3001/api/users_bind
 GET http://localhost:3001/api/objects
 
 ###
-
 GET http://localhost:3001/api/objects_bind
 
 
