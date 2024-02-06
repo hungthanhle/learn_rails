@@ -1,9 +1,8 @@
-"use strict";
 const userService = require('../services/userService');
 
 const getAllUsers = function (req, res) {
-  console.log(this); // undefined
-  console.log(this == global); // false
+  console.log(this); // global
+  console.log(this == global); // true
   // node learn_expressjs/a.js
   const users = userService.getUsers();
   res.json(users);

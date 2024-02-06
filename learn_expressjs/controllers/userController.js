@@ -1,27 +1,26 @@
 const userService = require('../services/userService');
 
-class UserController { // bị cho vào middleware
-  constructor() {
-    console.log("create new instance");
-  }
+function userController() { // bị cho vào middleware
+  console.log("create new instance");
 
-  getAllUsers(req, res) {
-    console.log(this); //undefined
+  this.getAllUsers = function (req, res) {
+    console.log(this); //global
+    console.log(this == global); // true
     const users = userService.getUsers();
     res.json(users);
   }
 
-  addUser(req, res) {
+  this.addUser = function (req, res) {
     const { name, email } = req.body;
     const newUser = userService.addUser(name, email); // UserService { users: [] } // UserService
     res.json(newUser);
   }
 
-  getAllUsersBind(req, res) {
+  this.getAllUsersBind = function (req, res) {
     console.log(this); // UserController {}
     const users = userService.getUsers();
     res.json(users);
   }
 }
 
-module.exports = new UserController();
+module.exports = new userController();
