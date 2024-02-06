@@ -25,6 +25,14 @@ class GreetingsController < ApplicationController
     # list PID:
     # ps aux
     # user      48950  1.3  0.8 1364884 140472 pts/5  Sl+  16:32   0:01 puma 5.6.8 (tcp://localhost:3000) [context]
+    
+    # <= ruby on rails params là một method của instance controller
+    # request/ params không phải method của global như - https://stackoverflow.com/questions/54137139/in-ruby-which-is-the-object-where-the-method-puts-is-applied
+    # debugger
+    # self.methods.include?(:request) # true
+    # self.request # #<ActionDispatch::Request GET "http://localhost:3000/greetings/hello" for 127.0.0.1>
+    # self.request == request # true
+    # params == self.request.params # true
     fnc_helper
   end
 

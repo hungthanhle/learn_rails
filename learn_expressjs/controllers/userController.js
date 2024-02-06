@@ -3,7 +3,7 @@ const userService = require('../services/userService');
 function userController() { // bị cho vào middleware
   console.log("create new instance");
 
-  this.getAllUsers = function (req, res) {
+  this.getAllUsers = function (req, res) { // nodejs đối số call funtion là params => req, res
     console.log(this); //global
     console.log(this == global); // true
     const users = userService.getUsers();
