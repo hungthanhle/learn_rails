@@ -63,4 +63,9 @@
 #
 # # <GreetingsController:0x00007f94dcbc1f60> 63c1f5d3-dd45-4286-b667-dd9308213543
 
-# tạo new_instance_controller/request
+# tạo new_instance_controller/request:
+# INFO [2024-02-06 15:03:49 +0700] PID-44474 TID-aic : [8b0aeda8-51f0-415e-afd8-7cac40bda705] Started GET "/greetings/hello" for 127.0.0.1 at 2024-02-06 15:03:49 +0700
+# create new instance
+
+# INFO [2024-02-06 15:04:22 +0700] PID-44474 TID-ajg : [5032df71-fd76-4726-8d2c-38cdbabed1d2] Started GET "/greetings/hello" for 127.0.0.1 at 2024-02-06 15:04:22 +0700
+# create new instance

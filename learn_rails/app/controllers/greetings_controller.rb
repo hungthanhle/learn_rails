@@ -1,6 +1,12 @@
 class GreetingsController < ApplicationController
   include GreetingsHelper
 
+  def initialize
+    super
+
+    puts "create new instance"
+  end
+
   def hello
     # debugger
     # self = #<GreetingsController:0x00000000015810>
